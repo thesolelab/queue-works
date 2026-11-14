@@ -48,7 +48,12 @@ local, losslessly compressed scene in
 behind live text and controls rather than inside a standalone illustration box.
 The artwork is decorative and visible only on Home. Navigation wraps on smaller
 screens rather than
-hiding labels beyond a horizontal scroll area.
+hiding labels beyond a horizontal scroll area. At phone widths (700px and below),
+a hamburger button replaces the tab strip. Open it to choose a tool; selection
+closes the menu and focuses the workspace. Escape returns focus to the button,
+and clicking outside also closes it. The button stays accessible while scrolling.
+Use Up/Down or Home/End inside the mobile list, then Enter/Space to select. Desktop
+keeps the existing tabs and their arrow-key behavior.
 
 ## Funnel & adoption calculator
 Open **Funnel & Adoption** from Home or the top navigation. Start with your own

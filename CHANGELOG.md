@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased — Mobile hamburger navigation
+- Add a phone-only menu button and collapsible tool list; retain desktop tabs.
+- Close after selection, Escape, or outside interaction, with accessible focus
+  behavior and responsive resizing. Keep the mobile header accessible on scroll.
+
+
 ## Unreleased — Simplified motivational hero
 - Remove the visible date and Your daily spark label above the daily message.
 - Keep local-date rotation and midnight/return refresh intact.

@@ -218,3 +218,9 @@ ChartData delimiter override must not change existing chart/funnel defaults.
 
 Keep the homepage motivational headline/detail without a date or “Your daily spark”
 label. Continue rotating messages by local date and refreshing at midnight/return.
+
+At 700px and below use the mobile hamburger disclosure; keep the desktop tab strip
+unchanged above that breakpoint. Keep CSS and matchMedia breakpoints aligned.
+Use aria-expanded/controls, vertical manual-activation tab keyboard navigation,
+Escape/outside dismissal, focus transfer on selection, and safe resize focus.
+Keep the toggle accessible during scrolling and never reset tool inputs.

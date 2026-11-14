@@ -19,6 +19,7 @@
  <body class="home-active">
   <div class="home-atmosphere" aria-hidden="true"><img src="assets/home-atmosphere.webp" width="1585" height="992" alt="" decoding="async" fetchpriority="high"/></div>
   <main class="shell">
+   <div class="site-navigation">
    <header class="top">
     <div>
      <h1>
@@ -29,8 +30,9 @@
     <div class="mark" role="img" aria-label="Simple Worx monogram">
      <span class="mark-s" aria-hidden="true">S</span><span class="mark-w brand-gradient" aria-hidden="true">W</span><span class="mark-dot" aria-hidden="true">.</span>
     </div>
+    <button id="mobile-nav-toggle" class="mobile-nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="tool-navigation"><span aria-hidden="true"><i></i><i></i><i></i></span></button>
    </header>
-   <div class="workspace-tabs" role="tablist" aria-label="Tools">
+   <div id="tool-navigation" class="workspace-tabs" role="tablist" aria-label="Tools">
     <button id="home-tab" type="button" role="tab" aria-selected="true" aria-controls="home-panel">Home</button>
     <button id="studio-tab" type="button" role="tab" aria-selected="false" aria-controls="studio-panel" tabindex="-1">Chart Creator</button>
     <button id="analyzer-tab" type="button" role="tab" aria-selected="false" aria-controls="analyzer-panel" tabindex="-1">A/B Tests</button>
@@ -40,6 +42,7 @@
     <button id="utm-tab" type="button" role="tab" aria-selected="false" aria-controls="utm-panel" tabindex="-1">UTM Builder</button>
     <button id="percentage-tab" type="button" role="tab" aria-selected="false" aria-controls="percentage-panel" tabindex="-1">Percentages</button>
     <button id="funnel-tab" type="button" role="tab" aria-selected="false" aria-controls="funnel-panel" tabindex="-1">Funnel &amp; Adoption</button>
+   </div>
    </div>
    <div id="home-panel" class="home-panel" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
     <section class="home-hero" aria-labelledby="home-message">
