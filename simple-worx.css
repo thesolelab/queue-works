@@ -175,3 +175,25 @@ body.home-active {background:var(--home-bg);isolation:isolate}
 /* Nine navigation tabs stay aligned across every workspace. */
 @media(min-width:1101px) and (max-width:1700px){.workspace-tabs{column-gap:8px}.workspace-tabs button{font-size:16px;padding:7px 12px}}
 @media(max-width:600px){.workspace-tabs #home-tab{grid-column:1/-1}}
+
+/* Mobile disclosure; desktop keeps the existing tab strip. */
+.site-navigation {display:contents}
+.mobile-nav-toggle {display:none}
+.workspace-tabs[hidden] {display:none!important}
+@media(max-width:700px){
+ .site-navigation {display:block;position:sticky;top:0;z-index:10;background:var(--bg);background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(12px)}
+ .top .mark {display:none}
+ .mobile-nav-toggle {display:flex;align-items:center;justify-content:center;flex:0 0 44px;width:44px;height:44px;padding:10px;color:var(--text);background:var(--surface-inset);border:1px solid var(--border-strong);border-radius:10px;cursor:pointer}
+ .mobile-nav-toggle>span {display:flex;flex-direction:column;gap:4px;width:20px}
+ .mobile-nav-toggle i {display:block;width:20px;height:2px;background:currentColor;transition:transform .15s ease,opacity .15s ease}
+ .mobile-nav-toggle[aria-expanded="true"] i:first-child {transform:translateY(6px) rotate(45deg)}
+ .mobile-nav-toggle[aria-expanded="true"] i:nth-child(2) {opacity:0}
+ .mobile-nav-toggle[aria-expanded="true"] i:last-child {transform:translateY(-6px) rotate(-45deg)}
+ .mobile-nav-toggle:focus-visible {outline:2px solid var(--accent-text);outline-offset:4px}
+ .workspace-tabs:not([data-mobile-open="true"]) {display:none}
+ .workspace-tabs[data-mobile-open="true"] {display:flex;flex-direction:column;align-items:stretch;position:relative;top:0;gap:4px;padding:10px;margin-top:12px;max-height:60vh;max-height:60svh;overflow-y:auto;background:var(--surface-inset);border:1px solid var(--border-strong);border-radius:12px;backdrop-filter:none}
+ .workspace-tabs button {width:100%;min-height:44px;padding:12px 14px;text-align:left;font-size:14px}
+ [role="tabpanel"] {scroll-margin-top:24px}
+}
+@media(prefers-reduced-motion:reduce){.mobile-nav-toggle i{transition:none}}
+@media(forced-colors:active){.mobile-nav-toggle{border:1px solid ButtonText}}
